@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Bebas_Neue } from "next/font/google";
 import "./globals.css";
+import { StorefrontChrome } from "@/components/storefront/storefront-chrome";
 
 const sans = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const display = Bebas_Neue({
@@ -21,7 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${sans.variable} ${display.variable}`}>{children}</body>
+      <body className={`${sans.variable} ${display.variable}`}>
+        <StorefrontChrome>{children}</StorefrontChrome>
+      </body>
     </html>
   );
 }
