@@ -20,7 +20,7 @@ export default function Error({
           Something went wrong
         </h2>
         <p className="text-mute mb-6">
-          We couldn't load the shop. Please try again.
+           We couldn&apos;t load the shop. Please try again.
         </p>
         <button
           onClick={reset}

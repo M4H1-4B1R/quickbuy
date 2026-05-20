@@ -3,7 +3,7 @@
 import { useState, useEffect, useMemo } from "react";
 import { useSearchParams } from "next/navigation";
 import { useHydrated } from "@/lib/use-hydrated";
-import { useCatalog } from "@/stores/catalog";
+import { useProducts } from "@/lib/hooks/use-products";
 import { ProductCard } from "@/components/storefront/product-card";
 import { ProductCardSkeleton } from "@/components/storefront/product-card-skeleton";
 import { FiltersSidebar } from "@/components/storefront/filters-sidebar";
@@ -42,7 +42,7 @@ export default function ShopPage() {
     }
   }, [searchParams]);
 
-  const products = useCatalog((state) => state.products);
+  const { data: products = [] } = useProducts();
 
   const filteredProducts = useMemo(() => {
     return applyFilters(products, filters);

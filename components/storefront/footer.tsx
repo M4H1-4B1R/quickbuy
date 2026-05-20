@@ -5,11 +5,9 @@ import Link from "next/link";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { useContent } from "@/stores/content";
 
 export function Footer() {
-  const [email, setEmail] = useState("");
-  const addSubscriber = useContent((s) => s.addSubscriber);
+const [email, setEmail] = useState("");
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
@@ -19,7 +17,8 @@ export function Footer() {
       toast.error("Please enter a valid email address.");
       return;
     }
-    addSubscriber(trimmed);
+    // addSubscriber(trimmed);
+    console.log("Subscribing", trimmed);
     setEmail("");
     toast.success("You're subscribed! Welcome to the list.");
   };

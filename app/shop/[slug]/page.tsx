@@ -3,15 +3,13 @@
 import { useState, useMemo, useEffect } from "react";
 import { notFound, useParams } from "next/navigation";
 import { toast } from "sonner";
-import { useHydrated } from "@/lib/use-hydrated";
-import { useCatalog } from "@/stores/catalog";
+import { useProduct, useProducts } from "@/lib/hooks/use-products";
 import { useCart } from "@/stores/cart";
 import { formatMoney } from "@/lib/utils";
 import { Gallery } from "@/components/storefront/gallery";
 import { VariantPicker } from "@/components/storefront/variant-picker";
 import { ProductGrid } from "@/components/storefront/product-grid";
 import { ProductCard } from "@/components/storefront/product-card";
-import { ProductCardSkeleton } from "@/components/storefront/product-card-skeleton";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { Minus, Plus } from "lucide-react";
@@ -21,14 +19,9 @@ import { ChevronLeft } from "lucide-react";
 export default function ProductPage() {
   const params = useParams();
   const slug = params.slug as string;
-  const hydrated = useHydrated();
-  const products = useCatalog((state) => state.products);
-  const categories = useCatalog((state) => state.categories);
-
-  const product = useMemo(
-    () => products.find((p) => p.slug === slug),
-    [products, slug],
-  );
+  
+  const { data: product, isLoading, error } = useProduct(slug);
+  const { data: products } = useProducts();
 
   const [selectedSize, setSelectedSize] = useState("");
   const [selectedColor, setSelectedColor] = useState("");
@@ -36,7 +29,7 @@ export default function ProductPage() {
 
   const relatedProducts = useMemo(
     () =>
-      product
+      product && products
         ? products
             .filter((p) => p.category === product.category && p.id !== product.id && p.status === "active")
             .slice(0, 4)
@@ -53,11 +46,11 @@ export default function ProductPage() {
     }
   }, [product, selectedSize]);
 
-  if (!hydrated) {
+  if (isLoading) {
     return <ProductPageSkeleton />;
   }
 
-  if (!product) {
+  if (error || !product) {
     notFound();
   }
 

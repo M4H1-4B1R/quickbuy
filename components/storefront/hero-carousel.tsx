@@ -4,10 +4,10 @@ import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useContent } from "@/stores/content";
+import { useBanners } from "@/lib/hooks/use-banners";
 
 export function HeroCarousel() {
-  const allBanners = useContent((s) => s.banners);
+  const { data: allBanners = [] } = useBanners();
   const sorted = [...allBanners].sort((a, b) => a.order - b.order);
   const [current, setCurrent] = useState(0);
   const banners = sorted;

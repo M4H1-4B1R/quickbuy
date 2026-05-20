@@ -2,16 +2,16 @@
 
 import { useState } from "react";
 import { toast } from "sonner";
-import { useContent } from "@/stores/content";
+import { useAddSubscriber } from "@/lib/hooks/use-newsletters";
 
 export function Newsletter() {
   const [email, setEmail] = useState("");
-  const addSubscriber = useContent.getState().addSubscriber;
+  const addSubscriber = useAddSubscriber();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email.trim()) return;
-    addSubscriber(email.trim());
+    await addSubscriber.mutateAsync(email.trim());
     toast.success("You're on the list!");
     setEmail("");
   };

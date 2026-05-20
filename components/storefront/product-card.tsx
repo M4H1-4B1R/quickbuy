@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useState } from "react";
 import { toast } from "sonner";
 import { useCart } from "@/stores/cart";
-import { useCatalog } from "@/stores/catalog";
 import { formatMoney } from "@/lib/utils";
 import type { Product } from "@/lib/types";
 import { Button } from "@/components/ui/button";
@@ -17,13 +16,12 @@ interface ProductCardProps {
 export function ProductCard({ product }: ProductCardProps) {
   const [hovered, setHovered] = useState(false);
   const addToCart = useCart.getState().add;
-  const addProduct = useCatalog.getState().addProduct;
-
-  const image = product.images[0];
-
-  const handleQuickAdd = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
+ 
+   const image = product.images[0];
+ 
+   const handleQuickAdd = (e: React.MouseEvent) => {
+     e.preventDefault();
+     e.stopPropagation();
 
     const firstInStockVariant =
       product.variants.find((v) => v.stock > 0) ??

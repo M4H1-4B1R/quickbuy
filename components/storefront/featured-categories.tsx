@@ -2,10 +2,10 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useCatalog } from "@/stores/catalog";
+import { useCategories } from "@/lib/hooks/use-categories";
 
 export function FeaturedCategories() {
-  const allCategories = useCatalog((s) => s.categories);
+  const { data: allCategories = [] } = useCategories();
   const categories = allCategories.filter((c) => c.featured);
 
   if (!categories.length) return null;

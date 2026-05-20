@@ -1,28 +1,52 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useSearchParams, useRouter } from "next/navigation";
-import { SlidersHorizontal, X } from "lucide-react";
-import { useCatalog } from "@/stores/catalog";
+import { SlidersHorizontal } from "lucide-react";
+import { useCategories } from "@/lib/hooks/use-categories";
 import { formatMoney } from "@/lib/utils";
 import type { FilterState } from "@/lib/filter";
 import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
 import { Slider } from "@/components/ui/slider";
 import { Switch } from "@/components/ui/switch";
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import { Label } from "@/components/ui/label";
 
-const ALL_SIZES = ["XS", "S", "M", "L", "XL", "38", "39", "40", "41", "42", "43", "44", "45"];
+const ALL_SIZES = [
+  "XS",
+  "S",
+  "M",
+  "L",
+  "XL",
+  "38",
+  "39",
+  "40",
+  "41",
+  "42",
+  "43",
+  "44",
+  "45",
+];
 
 interface FiltersSidebarProps {
   filters: FilterState;
   onFiltersChange: (filters: FilterState) => void;
 }
 
-export function FiltersSidebar({ filters, onFiltersChange }: FiltersSidebarProps) {
-  const categories = useCatalog.getState().categories;
-  const [priceRange, setPriceRange] = useState<[number, number]>([filters.min, filters.max === 1e9 ? 1000 : filters.max]);
+export function FiltersSidebar({
+  filters,
+  onFiltersChange,
+}: FiltersSidebarProps) {
+  const { data: categories = [] } = useCategories();
+  const [priceRange, setPriceRange] = useState<[number, number]>([
+    filters.min,
+    filters.max === 1e9 ? 1000 : filters.max,
+  ]);
   const [localFilters, setLocalFilters] = useState(filters);
 
   useEffect(() => {
@@ -31,11 +55,22 @@ export function FiltersSidebar({ filters, onFiltersChange }: FiltersSidebarProps
   }, [filters]);
 
   const handleApply = () => {
-    onFiltersChange({ ...localFilters, min: priceRange[0], max: priceRange[1] === 1000 ? 1e9 : priceRange[1] });
+    onFiltersChange({
+      ...localFilters,
+      min: priceRange[0],
+      max: priceRange[1] === 1000 ? 1e9 : priceRange[1],
+    });
   };
 
   const handleReset = () => {
-    const reset: FilterState = { category: "", sizes: [], min: 0, max: 1e9, inStock: false, sort: "newest" };
+    const reset: FilterState = {
+      category: "",
+      sizes: [],
+      min: 0,
+      max: 1e9,
+      inStock: false,
+      sort: "newest",
+    };
     setLocalFilters(reset);
     setPriceRange([0, 1000]);
     onFiltersChange(reset);

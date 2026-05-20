@@ -1,12 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { useCatalog } from "@/stores/catalog";
+import { useProducts } from "@/lib/hooks/use-products";
 import { ProductCard } from "./product-card";
 import { ProductGrid } from "./product-grid";
 
 export function TrendingSection() {
-  const allProducts = useCatalog((s) => s.products);
+  const { data: allProducts = [] } = useProducts();
   const products = allProducts
     .filter((p) => p.status === "active")
     .slice(0, 8);

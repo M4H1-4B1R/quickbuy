@@ -1,16 +1,18 @@
-import type { Metadata } from "next";
-import { Inter, Lora } from "next/font/google";
+import { Inter, Bebas_Neue } from "next/font/google";
 import "./globals.css";
 import { StorefrontChrome } from "@/components/storefront/storefront-chrome";
+import { Providers } from "./providers";
+import type { Metadata } from 'next';
 
 const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-sans",
 });
 
-const lora = Lora({
+const display = Bebas_Neue({
   subsets: ["latin"],
-  variable: "--font-lora",
+  weight: "400",
+  variable: "--font-display",
 });
 
 export const metadata: Metadata = {
@@ -25,8 +27,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${lora.variable} font-sans antialiased`}>
-        <StorefrontChrome>{children}</StorefrontChrome>
+      <body className={`${inter.variable} ${display.variable} font-sans antialiased`}>
+        <Providers>
+          <StorefrontChrome>{children}</StorefrontChrome>
+        </Providers>
       </body>
     </html>
   );

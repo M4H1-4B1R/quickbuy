@@ -407,7 +407,6 @@ for (const c of seedCategories) {
 }
 
 // ---------- Orders ----------
-const orderStatuses: Order["status"][] = ["pending", "processing", "shipped", "delivered"];
 
 function buildOrder(
   idx: number,
