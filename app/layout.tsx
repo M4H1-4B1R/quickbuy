@@ -1,18 +1,21 @@
 import type { Metadata } from "next";
-import { Inter, Bebas_Neue } from "next/font/google";
+import { Inter, Lora } from "next/font/google";
 import "./globals.css";
 import { StorefrontChrome } from "@/components/storefront/storefront-chrome";
 
-const sans = Inter({ subsets: ["latin"], variable: "--font-sans" });
-const display = Bebas_Neue({
-  weight: "400",
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-display",
+  variable: "--font-inter",
+});
+
+const lora = Lora({
+  subsets: ["latin"],
+  variable: "--font-lora",
 });
 
 export const metadata: Metadata = {
-  title: "E-Commerce Store",
-  description: "Storefront & Admin",
+  title: "Roadsters",
+  description: "Premium clothes, trendy apparel, and everyday fashion essentials",
 };
 
 export default function RootLayout({
@@ -22,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${sans.variable} ${display.variable}`}>
+      <body className={`${inter.variable} ${lora.variable} font-sans antialiased`}>
         <StorefrontChrome>{children}</StorefrontChrome>
       </body>
     </html>
