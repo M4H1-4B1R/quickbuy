@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "seed": "tsx scripts/seed-from-dump.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
@@ -59,6 +60,7 @@
     "postcss": "^8.4.0",
     "tailwindcss": "^3.4.0",
     "tailwindcss-animate": "^1.0.7",
+    "tsx": "^4.22.3",
     "typescript": "^5.0.0",
     "vitest": "^4.1.6"
   }

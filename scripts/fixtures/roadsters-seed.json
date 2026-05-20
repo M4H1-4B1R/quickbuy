@@ -1,0 +1,1079 @@
+[
+  {
+    "model": "api.category",
+    "pk": 1,
+    "fields": {
+      "name": "Apparel",
+      "name_ar": "ملابس",
+      "slug": "apparel",
+      "parent": null,
+      "description": "Men's and Women's Clothing",
+      "description_ar": "",
+      "image": "https://picsum.photos/seed/category-apparel/800/600",
+      "featured": true,
+      "created_at": "2025-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "api.category",
+    "pk": 2,
+    "fields": {
+      "name": "Footwear",
+      "name_ar": "أحذية",
+      "slug": "footwear",
+      "parent": null,
+      "description": "Shoes and Sneakers",
+      "description_ar": "",
+      "image": "https://picsum.photos/seed/category-footwear/800/600",
+      "featured": true,
+      "created_at": "2025-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "api.category",
+    "pk": 3,
+    "fields": {
+      "name": "Accessories",
+      "name_ar": "إكسسوارات",
+      "slug": "accessories",
+      "parent": null,
+      "description": "Watches, Bags, and More",
+      "description_ar": "",
+      "image": "https://picsum.photos/seed/category-accessories/800/600",
+      "featured": false,
+      "created_at": "2025-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "api.category",
+    "pk": 4,
+    "fields": {
+      "name": "Bags",
+      "name_ar": "حقائب",
+      "slug": "bags",
+      "parent": null,
+      "description": "Backpacks and Travel Bags",
+      "description_ar": "",
+      "image": "https://picsum.photos/seed/category-bags/800/600",
+      "featured": false,
+      "created_at": "2025-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "api.category",
+    "pk": 5,
+    "fields": {
+      "name": "Outerwear",
+      "name_ar": "جاكيتات",
+      "slug": "outerwear",
+      "parent": null,
+      "description": "Jackets and Coats",
+      "description_ar": "",
+      "image": "https://picsum.photos/seed/category-outerwear/800/600",
+      "featured": false,
+      "created_at": "2025-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "api.category",
+    "pk": 6,
+    "fields": {
+      "name": "Activewear",
+      "name_ar": "ملابس رياضية",
+      "slug": "activewear",
+      "parent": null,
+      "description": "Sports and Fitness Apparel",
+      "description_ar": "",
+      "image": "https://picsum.photos/seed/category-activewear/800/600",
+      "featured": false,
+      "created_at": "2025-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "api.category",
+    "pk": 7,
+    "fields": {
+      "name": "Home",
+      "name_ar": "المنزل",
+      "slug": "home",
+      "parent": null,
+      "description": "Home and Living",
+      "description_ar": "",
+      "image": "https://picsum.photos/seed/category-home/800/600",
+      "featured": false,
+      "created_at": "2025-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "api.category",
+    "pk": 8,
+    "fields": {
+      "name": "Lifestyle",
+      "name_ar": "أسلوب الحياة",
+      "slug": "lifestyle",
+      "parent": null,
+      "description": "Everyday Essentials",
+      "description_ar": "",
+      "image": "https://picsum.photos/seed/category-lifestyle/800/600",
+      "featured": false,
+      "created_at": "2025-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 1,
+    "fields": {
+      "name": "Classic Cotton T-Shirt",
+      "name_ar": "",
+      "description": "Premium cotton t-shirt with a comfortable fit. Perfect for everyday wear.",
+      "description_ar": "",
+      "description2": "Machine washable. Made from 100% organic cotton.",
+      "base_price": 29.99,
+      "discount_price": 24.99,
+      "slug": "classic-cotton-t-shirt",
+      "image": "https://picsum.photos/seed/tshirt-1/800/800",
+      "stock": 150,
+      "is_available": true,
+      "best_seller": true,
+      "inventory_mode": "single",
+      "categories": [1],
+      "created_at": "2025-01-20T10:00:00Z",
+      "updated_at": "2025-01-20T10:00:00Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 2,
+    "fields": {
+      "name": "Slim Fit Denim Jeans",
+      "name_ar": "",
+      "description": "Modern slim fit jeans with stretch comfort. Classic 5-pocket styling.",
+      "description_ar": "",
+      "description2": "98% cotton, 2% elastane. Machine wash cold.",
+      "base_price": 79.99,
+      "discount_price": null,
+      "slug": "slim-fit-denim-jeans",
+      "image": "https://picsum.photos/seed/jeans-1/800/800",
+      "stock": 85,
+      "is_available": true,
+      "best_seller": false,
+      "inventory_mode": "single",
+      "categories": [1],
+      "created_at": "2025-01-21T10:00:00Z",
+      "updated_at": "2025-01-21T10:00:00Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 3,
+    "fields": {
+      "name": "Performance Runner Sneakers",
+      "name_ar": "",
+      "description": "Lightweight running shoes with responsive cushioning. Ideal for daily runs.",
+      "description_ar": "",
+      "description2": "Breathable mesh upper. Rubber outsole for durability.",
+      "base_price": 129.99,
+      "discount_price": 109.99,
+      "slug": "performance-runner-sneakers",
+      "image": "https://picsum.photos/seed/sneakers-1/800/800",
+      "stock": 60,
+      "is_available": true,
+      "best_seller": true,
+      "inventory_mode": "single",
+      "categories": [2],
+      "created_at": "2025-01-22T10:00:00Z",
+      "updated_at": "2025-01-22T10:00:00Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 4,
+    "fields": {
+      "name": "Leather Minimalist Watch",
+      "name_ar": "",
+      "description": "Elegant minimalist watch with genuine leather strap. Water resistant to 30m.",
+      "description_ar": "",
+      "description2": "Japanese quartz movement. Stainless steel case.",
+      "base_price": 149.99,
+      "discount_price": null,
+      "slug": "leather-minimalist-watch",
+      "image": "https://picsum.photos/seed/watch-1/800/800",
+      "stock": 45,
+      "is_available": true,
+      "best_seller": false,
+      "inventory_mode": "single",
+      "categories": [3],
+      "created_at": "2025-01-23T10:00:00Z",
+      "updated_at": "2025-01-23T10:00:00Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 5,
+    "fields": {
+      "name": "Urban Daypack 25L",
+      "name_ar": "",
+      "description": "Versatile daypack with laptop compartment. Perfect for work or travel.",
+      "description_ar": "",
+      "description2": "Water-resistant fabric. Ergonomic shoulder straps.",
+      "base_price": 69.99,
+      "discount_price": 54.99,
+      "slug": "urban-daypack-25l",
+      "image": "https://picsum.photos/seed/backpack-1/800/800",
+      "stock": 95,
+      "is_available": true,
+      "best_seller": true,
+      "inventory_mode": "single",
+      "categories": [4],
+      "created_at": "2025-01-24T10:00:00Z",
+      "updated_at": "2025-01-24T10:00:00Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 6,
+    "fields": {
+      "name": "Wool Blend Overcoat",
+      "name_ar": "",
+      "description": "Classic wool blend overcoat. Timeless styling for formal occasions.",
+      "description_ar": "",
+      "description2": "70% wool, 30% polyester. Dry clean only.",
+      "base_price": 299.99,
+      "discount_price": null,
+      "slug": "wool-blend-overcoat",
+      "image": "https://picsum.photos/seed/coat-1/800/800",
+      "stock": 25,
+      "is_available": true,
+      "best_seller": false,
+      "inventory_mode": "single",
+      "categories": [5],
+      "created_at": "2025-01-25T10:00:00Z",
+      "updated_at": "2025-01-25T10:00:00Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 7,
+    "fields": {
+      "name": "Moisture-Wick Athletic Tee",
+      "name_ar": "",
+      "description": "Technical fabric t-shirt designed for intense workouts. Quick-dry technology.",
+      "description_ar": "",
+      "description2": "100% polyester. Machine washable.",
+      "base_price": 34.99,
+      "discount_price": null,
+      "slug": "moisture-wick-athletic-tee",
+      "image": "https://picsum.photos/seed/athletic-tee-1/800/800",
+      "stock": 120,
+      "is_available": true,
+      "best_seller": false,
+      "inventory_mode": "single",
+      "categories": [6],
+      "created_at": "2025-01-26T10:00:00Z",
+      "updated_at": "2025-01-26T10:00:00Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 8,
+    "fields": {
+      "name": "Premium Cotton bedsheet Set",
+      "name_ar": "",
+      "description": "Luxurious 400-thread count cotton bedsheet set. King size with pillowcases.",
+      "description_ar": "",
+      "description2": "100% Egyptian cotton. Machine washable.",
+      "base_price": 159.99,
+      "discount_price": 129.99,
+      "slug": "premium-cotton-bedsheet-set",
+      "image": "https://picsum.photos/seed/bedsheet-1/800/800",
+      "stock": 40,
+      "is_available": true,
+      "best_seller": false,
+      "inventory_mode": "single",
+      "categories": [7],
+      "created_at": "2025-01-27T10:00:00Z",
+      "updated_at": "2025-01-27T10:00:00Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 9,
+    "fields": {
+      "name": "Ceramic Minimalist Vase",
+      "name_ar": "",
+      "description": "Handcrafted ceramic vase with matte finish. Perfect for modern interiors.",
+      "description_ar": "",
+      "description2": "Handmade. Wipe clean with damp cloth.",
+      "base_price": 45.99,
+      "discount_price": null,
+      "slug": "ceramic-minimalist-vase",
+      "image": "https://picsum.photos/seed/vase-1/800/800",
+      "stock": 55,
+      "is_available": true,
+      "best_seller": false,
+      "inventory_mode": "single",
+      "categories": [7],
+      "created_at": "2025-01-28T10:00:00Z",
+      "updated_at": "2025-01-28T10:00:00Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 10,
+    "fields": {
+      "name": "Classic Polo Shirt",
+      "name_ar": "",
+      "description": "Timeless polo shirt with embroidered logo. Comfortable cotton-pique fabric.",
+      "description_ar": "",
+      "description2": "100% cotton. Machine washable.",
+      "base_price": 49.99,
+      "discount_price": 39.99,
+      "slug": "classic-polo-shirt",
+      "image": "https://picsum.photos/seed/polo-1/800/800",
+      "stock": 90,
+      "is_available": true,
+      "best_seller": true,
+      "inventory_mode": "single",
+      "categories": [1],
+      "created_at": "2025-01-29T10:00:00Z",
+      "updated_at": "2025-01-29T10:00:00Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 11,
+    "fields": {
+      "name": "Casual Canvas Sneakers",
+      "name_ar": "",
+      "description": "Lightweight canvas sneakers for everyday casual wear. Vulcanized rubber sole.",
+      "description_ar": "",
+      "description2": "Canvas upper, rubber sole. Spot clean.",
+      "base_price": 59.99,
+      "discount_price": null,
+      "slug": "casual-canvas-sneakers",
+      "image": "https://picsum.photos/seed/canvas-sneakers-1/800/800",
+      "stock": 75,
+      "is_available": true,
+      "best_seller": false,
+      "inventory_mode": "single",
+      "categories": [2],
+      "created_at": "2025-01-30T10:00:00Z",
+      "updated_at": "2025-01-30T10:00:00Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 12,
+    "fields": {
+      "name": "Leather Crossbody Bag",
+      "name_ar": "",
+      "description": "Compact crossbody bag in genuine leather. Adjustable strap for versatility.",
+      "description_ar": "",
+      "description2": "Genuine leather. Wipe clean.",
+      "base_price": 89.99,
+      "discount_price": null,
+      "slug": "leather-crossbody-bag",
+      "image": "https://picsum.photos/seed/crossbody-1/800/800",
+      "stock": 35,
+      "is_available": true,
+      "best_seller": false,
+      "inventory_mode": "single",
+      "categories": [4],
+      "created_at": "2025-01-31T10:00:00Z",
+      "updated_at": "2025-01-31T10:00:00Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 13,
+    "fields": {
+      "name": "Lightweight Windbreaker",
+      "name_ar": "",
+      "description": "Packable windbreaker with water-resistant coating. Great for layering.",
+      "description_ar": "",
+      "description2": "100% nylon. Machine washable.",
+      "base_price": 79.99,
+      "discount_price": 64.99,
+      "slug": "lightweight-windbreaker",
+      "image": "https://picsum.photos/seed/windbreaker-1/800/800",
+      "stock": 65,
+      "is_available": true,
+      "best_seller": true,
+      "inventory_mode": "single",
+      "categories": [5],
+      "created_at": "2025-02-01T10:00:00Z",
+      "updated_at": "2025-02-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 14,
+    "fields": {
+      "name": "Compression Leggings",
+      "name_ar": "",
+      "description": "High-waisted compression leggings for workouts. Squat-proof fabric.",
+      "description_ar": "",
+      "description2": "Nylon/spandex blend. Machine wash cold.",
+      "base_price": 54.99,
+      "discount_price": null,
+      "slug": "compression-leggings",
+      "image": "https://picsum.photos/seed/leggings-1/800/800",
+      "stock": 110,
+      "is_available": true,
+      "best_seller": false,
+      "inventory_mode": "single",
+      "categories": [6],
+      "created_at": "2025-02-02T10:00:00Z",
+      "updated_at": "2025-02-02T10:00:00Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 15,
+    "fields": {
+      "name": "Stainless Steel Water Bottle",
+      "name_ar": "",
+      "description": "Insulated stainless steel water bottle. Keeps drinks cold for 24 hours.",
+      "description_ar": "",
+      "description2": "Double-wall vacuum. BPA-free.",
+      "base_price": 29.99,
+      "discount_price": null,
+      "slug": "stainless-steel-water-bottle",
+      "image": "https://picsum.photos/seed/bottle-1/800/800",
+      "stock": 200,
+      "is_available": true,
+      "best_seller": true,
+      "inventory_mode": "single",
+      "categories": [8],
+      "created_at": "2025-02-03T10:00:00Z",
+      "updated_at": "2025-02-03T10:00:00Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 16,
+    "fields": {
+      "name": "Linen Blend Casual Shirt",
+      "name_ar": "",
+      "description": "Breathable linen-blend shirt for warm days. Relaxed fit for comfort.",
+      "description_ar": "",
+      "description2": "55% linen, 45% cotton. Machine washable.",
+      "base_price": 64.99,
+      "discount_price": 54.99,
+      "slug": "linen-blend-casual-shirt",
+      "image": "https://picsum.photos/seed/linen-shirt-1/800/800",
+      "stock": 70,
+      "is_available": true,
+      "best_seller": false,
+      "inventory_mode": "single",
+      "categories": [1],
+      "created_at": "2025-02-04T10:00:00Z",
+      "updated_at": "2025-02-04T10:00:00Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 17,
+    "fields": {
+      "name": "Classic Leather Boots",
+      "name_ar": "",
+      "description": "Hand-stitched leather boots with durable rubber sole. Goodyear welted.",
+      "description_ar": "",
+      "description2": "Full-grain leather. Condition regularly.",
+      "base_price": 199.99,
+      "discount_price": null,
+      "slug": "classic-leather-boots",
+      "image": "https://picsum.photos/seed/boots-1/800/800",
+      "stock": 30,
+      "is_available": true,
+      "best_seller": false,
+      "inventory_mode": "single",
+      "categories": [2],
+      "created_at": "2025-02-05T10:00:00Z",
+      "updated_at": "2025-02-05T10:00:00Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 18,
+    "fields": {
+      "name": "Sunglasses with Wood Frame",
+      "name_ar": "",
+      "description": "Eco-friendly wooden frame sunglasses with UV400 protection.",
+      "description_ar": "",
+      "description2": "Sustainable bamboo wood. Soft pouch included.",
+      "base_price": 75.99,
+      "discount_price": null,
+      "slug": "sunglasses-wood-frame",
+      "image": "https://picsum.photos/seed/sunglasses-1/800/800",
+      "stock": 50,
+      "is_available": true,
+      "best_seller": false,
+      "inventory_mode": "single",
+      "categories": [3],
+      "created_at": "2025-02-06T10:00:00Z",
+      "updated_at": "2025-02-06T10:00:00Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 19,
+    "fields": {
+      "name": "Travel Duffel Bag",
+      "name_ar": "",
+      "description": "Spacious duffel bag with shoe compartment. Ideal for weekend trips.",
+      "description_ar": "",
+      "description2": "Water-resistant polyester. Detachable shoulder strap.",
+      "base_price": 84.99,
+      "discount_price": 69.99,
+      "slug": "travel-duffel-bag",
+      "image": "https://picsum.photos/seed/duffel-1/800/800",
+      "stock": 45,
+      "is_available": true,
+      "best_seller": true,
+      "inventory_mode": "single",
+      "categories": [4],
+      "created_at": "2025-02-07T10:00:00Z",
+      "updated_at": "2025-02-07T10:00:00Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 20,
+    "fields": {
+      "name": "Fleece Zip-Up Hoodie",
+      "name_ar": "",
+      "description": "Soft fleece hoodie with kangaroo pocket. Perfect for layering.",
+      "description_ar": "",
+      "description2": "80% cotton, 20% polyester. Machine wash cold.",
+      "base_price": 59.99,
+      "discount_price": null,
+      "slug": "fleece-zip-up-hoodie",
+      "image": "https://picsum.photos/seed/hoodie-1/800/800",
+      "stock": 80,
+      "is_available": true,
+      "best_seller": true,
+      "inventory_mode": "single",
+      "categories": [5],
+      "created_at": "2025-02-08T10:00:00Z",
+      "updated_at": "2025-02-08T10:00:00Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 21,
+    "fields": {
+      "name": "Running Shorts",
+      "name_ar": "",
+      "description": "Lightweight running shorts with built-in liner. Reflective details.",
+      "description_ar": "",
+      "description2": "100% polyester. Machine washable.",
+      "base_price": 39.99,
+      "discount_price": 32.99,
+      "slug": "running-shorts",
+      "image": "https://picsum.photos/seed/shorts-1/800/800",
+      "stock": 100,
+      "is_available": true,
+      "best_seller": false,
+      "inventory_mode": "single",
+      "categories": [6],
+      "created_at": "2025-02-09T10:00:00Z",
+      "updated_at": "2025-02-09T10:00:00Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 22,
+    "fields": {
+      "name": "Scented Soy Candle Set",
+      "name_ar": "",
+      "description": "Set of 3 soy wax candles in relaxing scents. 40-hour burn time each.",
+      "description_ar": "",
+      "description2": "100% natural soy wax. Cotton wicks.",
+      "base_price": 38.99,
+      "discount_price": null,
+      "slug": "scented-soy-candle-set",
+      "image": "https://picsum.photos/seed/candles-1/800/800",
+      "stock": 60,
+      "is_available": true,
+      "best_seller": false,
+      "inventory_mode": "single",
+      "categories": [7],
+      "created_at": "2025-02-10T10:00:00Z",
+      "updated_at": "2025-02-10T10:00:00Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 23,
+    "fields": {
+      "name": "Canvas Wall Art Set",
+      "name_ar": "",
+      "description": "Set of 3 canvas prints in abstract designs. Ready to hang.",
+      "description_ar": "",
+      "description2": "Museum-quality print on stretched canvas.",
+      "base_price": 89.99,
+      "discount_price": 74.99,
+      "slug": "canvas-wall-art-set",
+      "image": "https://picsum.photos/seed/wallart-1/800/800",
+      "stock": 25,
+      "is_available": true,
+      "best_seller": false,
+      "inventory_mode": "single",
+      "categories": [7],
+      "created_at": "2025-02-11T10:00:00Z",
+      "updated_at": "2025-02-11T10:00:00Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 24,
+    "fields": {
+      "name": "Wireless Charging Pad",
+      "name_ar": "",
+      "description": "Sleek wireless charging pad compatible with all Qi-enabled devices.",
+      "description_ar": "",
+      "description2": "10W fast charging. LED indicator.",
+      "base_price": 34.99,
+      "discount_price": null,
+      "slug": "wireless-charging-pad",
+      "image": "https://picsum.photos/seed/charger-1/800/800",
+      "stock": 130,
+      "is_available": true,
+      "best_seller": true,
+      "inventory_mode": "single",
+      "categories": [8],
+      "created_at": "2025-02-12T10:00:00Z",
+      "updated_at": "2025-02-12T10:00:00Z"
+    }
+  },
+  {
+    "model": "api.coupon",
+    "pk": 1,
+    "fields": {
+      "code": "WELCOME10",
+      "discount_type": "percent",
+      "discount_value": 10,
+      "usage_limit": 1000,
+      "used_count": 45,
+      "valid_until": "2026-12-31T23:59:59Z",
+      "is_active": true,
+      "minimum_order_amount": 50
+    }
+  },
+  {
+    "model": "api.coupon",
+    "pk": 2,
+    "fields": {
+      "code": "FREESHIP",
+      "discount_type": "fixed",
+      "discount_value": 5,
+      "usage_limit": 500,
+      "used_count": 120,
+      "valid_until": "2026-06-30T23:59:59Z",
+      "is_active": true,
+      "minimum_order_amount": 0
+    }
+  },
+  {
+    "model": "api.coupon",
+    "pk": 3,
+    "fields": {
+      "code": "SAVE20",
+      "discount_type": "percent",
+      "discount_value": 20,
+      "usage_limit": 200,
+      "used_count": 15,
+      "valid_until": "2026-03-31T23:59:59Z",
+      "is_active": true,
+      "minimum_order_amount": 100
+    }
+  },
+  {
+    "model": "api.shippingoption",
+    "pk": 1,
+    "fields": {
+      "name": "Standard Delivery",
+      "name_ar": "توصيل قياسي",
+      "description": "Delivered within 5-7 business days",
+      "description_ar": "",
+      "price": 5.99,
+      "estimated_days": 7,
+      "is_active": true
+    }
+  },
+  {
+    "model": "api.shippingoption",
+    "pk": 2,
+    "fields": {
+      "name": "Express Delivery",
+      "name_ar": "توصيل سريع",
+      "description": "Delivered within 2-3 business days",
+      "description_ar": "",
+      "price": 12.99,
+      "estimated_days": 3,
+      "is_active": true
+    }
+  },
+  {
+    "model": "api.shippingoption",
+    "pk": 3,
+    "fields": {
+      "name": "Fast Delivery",
+      "name_ar": "توصيل فوري",
+      "description": "Delivered next business day",
+      "description_ar": "",
+      "price": 24.99,
+      "estimated_days": 1,
+      "is_active": true
+    }
+  },
+  {
+    "model": "api.bannerswiper",
+    "pk": 1,
+    "fields": {
+      "title": "New Season Arrivals",
+      "title_ar": "",
+      "subtitle": "Discover the latest trends for this season",
+      "subtitle_ar": "",
+      "file": "https://picsum.photos/seed/banner1/1920/800",
+      "link": "/shop",
+      "is_active": true,
+      "order": 1
+    }
+  },
+  {
+    "model": "api.bannerswiper",
+    "pk": 2,
+    "fields": {
+      "title": "Summer Sale",
+      "title_ar": "",
+      "subtitle": "Up to 50% off on selected items",
+      "subtitle_ar": "",
+      "file": "https://picsum.photos/seed/banner2/1920/800",
+      "link": "/shop?sale=true",
+      "is_active": true,
+      "order": 2
+    }
+  },
+  {
+    "model": "api.bannerswiper",
+    "pk": 3,
+    "fields": {
+      "title": "Free Shipping",
+      "title_ar": "",
+      "subtitle": "On orders over $100",
+      "subtitle_ar": "",
+      "file": "https://picsum.photos/seed/banner3/1920/800",
+      "link": "/shipping-info",
+      "is_active": true,
+      "order": 3
+    }
+  },
+  {
+    "model": "api.swiper",
+    "pk": 1,
+    "fields": {
+      "title": "Featured Collection",
+      "title_ar": "",
+      "subtitle": "Handpicked for you",
+      "subtitle_ar": "",
+      "image": "https://picsum.photos/seed/swiper1/800/600",
+      "icon": "",
+      "link": "/collection/featured",
+      "is_active": true,
+      "order": 1
+    }
+  },
+  {
+    "model": "api.swiper",
+    "pk": 2,
+    "fields": {
+      "title": "New Arrivals",
+      "title_ar": "",
+      "subtitle": "Fresh styles added",
+      "subtitle_ar": "",
+      "image": "https://picsum.photos/seed/swiper2/800/600",
+      "icon": "",
+      "link": "/shop?sort=newest",
+      "is_active": true,
+      "order": 2
+    }
+  },
+  {
+    "model": "api.swiper",
+    "pk": 3,
+    "fields": {
+      "title": "Best Sellers",
+      "title_ar": "",
+      "subtitle": "Most popular items",
+      "subtitle_ar": "",
+      "image": "https://picsum.photos/seed/swiper3/800/600",
+      "icon": "",
+      "link": "/collection/best-sellers",
+      "is_active": true,
+      "order": 3
+    }
+  },
+  {
+    "model": "api.swiper",
+    "pk": 4,
+    "fields": {
+      "title": "Under $50",
+      "title_ar": "",
+      "subtitle": "Great picks under $50",
+      "subtitle_ar": "",
+      "image": "https://picsum.photos/seed/swiper4/800/600",
+      "icon": "",
+      "link": "/shop?max_price=50",
+      "is_active": true,
+      "order": 4
+    }
+  },
+  {
+    "model": "api.emailnewsletter",
+    "pk": 1,
+    "fields": {
+      "full_name": "John Doe",
+      "email": "john.doe@example.com",
+      "created_at": "2025-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "api.emailnewsletter",
+    "pk": 2,
+    "fields": {
+      "full_name": "Jane Smith",
+      "email": "jane.smith@example.com",
+      "created_at": "2025-01-16T10:00:00Z"
+    }
+  },
+  {
+    "model": "api.emailnewsletter",
+    "pk": 3,
+    "fields": {
+      "full_name": "Bob Wilson",
+      "email": "bob.wilson@example.com",
+      "created_at": "2025-01-17T10:00:00Z"
+    }
+  },
+  {
+    "model": "api.order",
+    "pk": 1,
+    "fields": {
+      "checkout_id": "ORD-001-ABC123",
+      "hyperpay_transaction_id": "TXN-001-XYZ",
+      "payment_status": "success",
+      "payment_method": "card",
+      "full_name": "John Doe",
+      "email": "john.doe@example.com",
+      "phone": "+962790000001",
+      "address": "123 Main Street, Apt 4B",
+      "city": "Amman",
+      "country": "Jordan",
+      "total_amount": 154.97,
+      "discounted_total": 139.47,
+      "status": "delivered",
+      "currency": 1,
+      "shipping_option": 2,
+      "coupon": 1,
+      "created_at": "2025-02-01T14:30:00Z"
+    }
+  },
+  {
+    "model": "api.order",
+    "pk": 2,
+    "fields": {
+      "checkout_id": "ORD-002-DEF456",
+      "hyperpay_transaction_id": "TXN-002-ABC",
+      "payment_status": "success",
+      "payment_method": "cod",
+      "full_name": "Jane Smith",
+      "email": "jane.smith@example.com",
+      "phone": "+962790000002",
+      "address": "456 Oak Avenue",
+      "city": "Irbid",
+      "country": "Jordan",
+      "total_amount": 89.99,
+      "discounted_total": 89.99,
+      "status": "shipped",
+      "currency": 1,
+      "shipping_option": 1,
+      "coupon": null,
+      "created_at": "2025-02-03T10:15:00Z"
+    }
+  },
+  {
+    "model": "api.order",
+    "pk": 3,
+    "fields": {
+      "checkout_id": "ORD-003-GHI789",
+      "hyperpay_transaction_id": "TXN-003-DEF",
+      "payment_status": "success",
+      "payment_method": "card",
+      "full_name": "Ahmed Hassan",
+      "email": "ahmed.h@example.com",
+      "phone": "+962790000003",
+      "address": "789 Garden Road",
+      "city": "Zarqa",
+      "country": "Jordan",
+      "total_amount": 299.99,
+      "discounted_total": 239.99,
+      "status": "processing",
+      "currency": 1,
+      "shipping_option": 3,
+      "coupon": 3,
+      "created_at": "2025-02-05T16:45:00Z"
+    }
+  },
+  {
+    "model": "api.order",
+    "pk": 4,
+    "fields": {
+      "checkout_id": "ORD-004-JKL012",
+      "hyperpay_transaction_id": "TXN-004-GHI",
+      "payment_status": "success",
+      "payment_method": "card",
+      "full_name": "Sarah Johnson",
+      "email": "sarah.j@example.com",
+      "phone": "+962790000004",
+      "address": "321 Pine Street",
+      "city": "Amman",
+      "country": "Jordan",
+      "total_amount": 64.98,
+      "discounted_total": 58.48,
+      "status": "pending",
+      "currency": 1,
+      "shipping_option": 1,
+      "coupon": 1,
+      "created_at": "2025-02-08T09:20:00Z"
+    }
+  },
+  {
+    "model": "api.order",
+    "pk": 5,
+    "fields": {
+      "checkout_id": "ORD-005-MNO345",
+      "hyperpay_transaction_id": "TXN-005-JKL",
+      "payment_status": "pending",
+      "payment_method": "card",
+      "full_name": "Michael Brown",
+      "email": "michael.b@example.com",
+      "phone": "+962790000005",
+      "address": "654 Cedar Lane",
+      "city": "Aqaba",
+      "country": "Jordan",
+      "total_amount": 179.97,
+      "discounted_total": 179.97,
+      "status": "pending",
+      "currency": 1,
+      "shipping_option": 2,
+      "coupon": null,
+      "created_at": "2025-02-10T11:30:00Z"
+    }
+  },
+  {
+    "model": "api.orderitem",
+    "pk": 1,
+    "fields": {
+      "order": 1,
+      "product": 1,
+      "product_name": "Classic Cotton T-Shirt",
+      "product_price": 24.99,
+      "product_image": "https://picsum.photos/seed/tshirt-1/800/800",
+      "quantity": 2,
+      "selected_options": {}
+    }
+  },
+  {
+    "model": "api.orderitem",
+    "pk": 2,
+    "fields": {
+      "order": 1,
+      "product": 3,
+      "product_name": "Performance Runner Sneakers",
+      "product_price": 109.99,
+      "product_image": "https://picsum.photos/seed/sneakers-1/800/800",
+      "quantity": 1,
+      "selected_options": {}
+    }
+  },
+  {
+    "model": "api.orderitem",
+    "pk": 3,
+    "fields": {
+      "order": 2,
+      "product": 5,
+      "product_name": "Urban Daypack 25L",
+      "product_price": 54.99,
+      "product_image": "https://picsum.photos/seed/backpack-1/800/800",
+      "quantity": 1,
+      "selected_options": {}
+    }
+  },
+  {
+    "model": "api.orderitem",
+    "pk": 4,
+    "fields": {
+      "order": 2,
+      "product": 10,
+      "product_name": "Classic Polo Shirt",
+      "product_price": 39.99,
+      "product_image": "https://picsum.photos/seed/polo-1/800/800",
+      "quantity": 1,
+      "selected_options": {}
+    }
+  },
+  {
+    "model": "api.orderitem",
+    "pk": 5,
+    "fields": {
+      "order": 3,
+      "product": 6,
+      "product_name": "Wool Blend Overcoat",
+      "product_price": 299.99,
+      "product_image": "https://picsum.photos/seed/coat-1/800/800",
+      "quantity": 1,
+      "selected_options": {}
+    }
+  },
+  {
+    "model": "api.orderitem",
+    "pk": 6,
+    "fields": {
+      "order": 4,
+      "product": 7,
+      "product_name": "Moisture-Wick Athletic Tee",
+      "product_price": 34.99,
+      "product_image": "https://picsum.photos/seed/athletic-tee-1/800/800",
+      "quantity": 2,
+      "selected_options": {}
+    }
+  },
+  {
+    "model": "api.orderitem",
+    "pk": 7,
+    "fields": {
+      "order": 5,
+      "product": 4,
+      "product_name": "Leather Minimalist Watch",
+      "product_price": 149.99,
+      "product_image": "https://picsum.photos/seed/watch-1/800/800",
+      "quantity": 1,
+      "selected_options": {}
+    }
+  },
+  {
+    "model": "api.orderitem",
+    "pk": 8,
+    "fields": {
+      "order": 5,
+      "product": 15,
+      "product_name": "Stainless Steel Water Bottle",
+      "product_price": 29.99,
+      "product_image": "https://picsum.photos/seed/bottle-1/800/800",
+      "quantity": 1,
+      "selected_options": {}
+    }
+  }
+]
