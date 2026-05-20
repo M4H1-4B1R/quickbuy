@@ -5,9 +5,8 @@ import Link from "next/link";
 import { useCatalog } from "@/stores/catalog";
 
 export function FeaturedCategories() {
-  const categories = useCatalog((s) =>
-    s.categories.filter((c) => c.featured),
-  );
+  const allCategories = useCatalog((s) => s.categories);
+  const categories = allCategories.filter((c) => c.featured);
 
   if (!categories.length) return null;
 

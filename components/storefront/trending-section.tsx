@@ -6,9 +6,10 @@ import { ProductCard } from "./product-card";
 import { ProductGrid } from "./product-grid";
 
 export function TrendingSection() {
-  const products = useCatalog((s) =>
-    s.products.filter((p) => p.status === "active").slice(0, 8),
-  );
+  const allProducts = useCatalog((s) => s.products);
+  const products = allProducts
+    .filter((p) => p.status === "active")
+    .slice(0, 8);
 
   if (!products.length) return null;
 
