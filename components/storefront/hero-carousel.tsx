@@ -5,11 +5,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useContent } from "@/stores/content";
-import type { Banner } from "@/lib/types";
 
 export function HeroCarousel() {
-  const banners = useContent((s) => [...s.banners].sort((a, b) => a.order - b.order));
+  const allBanners = useContent((s) => s.banners);
+  const sorted = [...allBanners].sort((a, b) => a.order - b.order);
   const [current, setCurrent] = useState(0);
+  const banners = sorted;
 
   const next = useCallback(() => {
     setCurrent((c) => (c + 1) % banners.length);
